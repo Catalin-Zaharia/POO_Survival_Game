@@ -68,6 +68,6 @@ speedPotion::~speedPotion()
 
 void speedPotion::effect(unit* obj)
 {
-	obj->setAtkSpd(obj->AtkSpd() - 1000);
+	obj->setAtkSpd((float)(obj->AtkSpd() - 1) / 10);
 	std::cout << obj->Name() << " now attacks 0.1 seconds faster" << "\n";
 }

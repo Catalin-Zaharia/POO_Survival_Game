@@ -204,17 +204,17 @@ void Game::moveUnits()
 {
 	for (int i = 0; i < this->unitsNum; i++) 
 	{
-		this->unitArray[i]->move();
-		int x = getLocation(this->unitArray[i]).locX;
-		int y = getLocation(this->unitArray[i]).locY;
-		x = minim(x, this->mapSize-1);
-		y = minim(y, this->mapSize-1);
-		x = maxim(x, 0);
-		y = maxim(y, 0);
-		setLocation(this->unitArray[i], x, y);
-		if (this->unitArray[i]->isAlive())
-		std::cout << this->unitArray[i]->Name() << " moved to " << x+1 << ":" << y+1 << '\n';
-		
+		if (this->unitArray[i]->isAlive()) {
+			this->unitArray[i]->move();
+			int x = getLocation(this->unitArray[i]).locX;
+			int y = getLocation(this->unitArray[i]).locY;
+			x = minim(x, this->mapSize - 1);
+			y = minim(y, this->mapSize - 1);
+			x = maxim(x, 0);
+			y = maxim(y, 0);
+			setLocation(this->unitArray[i], x, y);
+			std::cout << this->unitArray[i]->Name() << " moved to " << x + 1 << ":" << y + 1 << '\n';
+		}
 	}
 }
 

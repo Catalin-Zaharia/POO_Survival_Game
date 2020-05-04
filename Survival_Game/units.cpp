@@ -73,7 +73,7 @@ void unit::setDmg(int x) {
 }
 
 void unit::setAtkSpd(float x) {
-	this->atkSpd = x*10000; 
+	this->atkSpd = x*10; 
 }
 
 void unit::setName(std::string name)
@@ -99,7 +99,7 @@ int unit::AtkSpd() { return this->atkSpd; }
 
 bool unit::isAlive()
 {
-	if (this->Hp()>0)
+	if (this->Hp()>0 and this->currentLoc.locX!=-1)
 	return true;
 	return false;
 }
@@ -163,9 +163,17 @@ void unit::remove()
 
 fighter::fighter()
 {
-	this->setArmor(100);
+	this->setArmor(80);
 	this->setAtkSpd(1.2);
 	this->setDmg(25);
+}
+
+void fighter::move()
+{
+	if (this->isAlive()) {
+		this->setHp(this->Hp() + 10);
+		this->unit::move();
+	}
 }
 
 void fighter::setName(std::string name)

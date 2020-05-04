@@ -44,6 +44,7 @@ class fighter ://bonus armor
 {
 public:
 	fighter();
+	void move();
 	void setName(std::string name = "");
 };
 
