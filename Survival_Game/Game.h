@@ -26,7 +26,6 @@ public:
 	void showMap();
 	void run();
 	void setParams(int unitsToBeSpawned, int itemsToBeSpawned, int roundsToBePlayed = 0, int mapSize=15);
-	//void runXrounds(int NofRounds);
 	void spawnUnit(int type);
 	void spawnUnits(int numberOfSpawns=1, int locX=0, int locY=0);
 	void moveUnits();

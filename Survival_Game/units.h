@@ -39,7 +39,7 @@ public:
 	void remove();
 };
 
-class fighter ://bonus armor
+class fighter ://heal every round
 	public unit
 {
 public:

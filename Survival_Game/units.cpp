@@ -159,7 +159,7 @@ void unit::remove()
 }
 
 //
-//
+//class methods
 
 fighter::fighter()
 {
