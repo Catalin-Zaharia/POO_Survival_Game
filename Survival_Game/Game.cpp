@@ -11,7 +11,7 @@ Game::Game()
 	this->itemsNum = 0;
 	for (int i = 0; i < this->mapSize; i++) {
 		for (int j = 0; j < this->mapSize; j++) {
-			map[i][j] = '0';
+			map[i][j] = "-";
 		}
 	}
 	this->roundsToBePlayed = 0;
@@ -28,7 +28,7 @@ Game::Game(std::vector<unit*> unitArray, std::vector<item*> itemArray, int arrSi
 	this->itemArray = itemArray;
 	for (int i = 0; i < this->mapSize; i++) {
 		for (int j = 0; j < this->mapSize; j++) {
-			map[i][j] = '0';
+			map[i][j] = "-";
 		}
 	}
 	this->roundsToBePlayed = 0;
@@ -45,7 +45,7 @@ Game::Game(const Game& obj)
 	this->itemArray = obj.itemArray;
 	for (int i = 0; i < this->mapSize; i++) {
 		for (int j = 0; j < this->mapSize; j++) {
-			map[i][j] = '0';
+			map[i][j] = "-";
 		}
 	}
 	this->roundsToBePlayed = obj.roundsToBePlayed;
@@ -106,7 +106,7 @@ void Game::showMap()
 {
 	for (int i = 0; i < this->mapSize; i++) {
 		for (int j = 0; j < this->mapSize; j++) {
-			map[i][j] = '0';
+			map[i][j] = '-';
 		}
 	}
 	for (int i = 0; i < this->itemsNum; i++) {
