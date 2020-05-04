@@ -149,6 +149,7 @@ void unit::engage(unit& enemy)
 	}
 }
 
+
 void unit::remove()
 {
 	std::cout << this->Name() << " was slain." << '\n';
